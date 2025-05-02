@@ -1,0 +1,10 @@
+test1\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_printf.c
+test1\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_printf.h
+test1\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../lv_conf_internal.h
+test1\lv_printf.o: C:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+test1\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\../lv_conf_kconfig.h
+test1\lv_printf.o: ../Middlewares/LVGL/GUI/lvgl/examples/porting/../../lv_conf.h
+test1\lv_printf.o: C:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+test1\lv_printf.o: C:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test1\lv_printf.o: ..\Middlewares\LVGL\GUI\lvgl\src\misc\lv_types.h
+test1\lv_printf.o: C:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
