@@ -19,9 +19,10 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
-#include "memorymap.h"
-#include "spi.h"
 #include "usart.h"
+#include "memorymap.h"
+#include "sdmmc.h"
+#include "spi.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -34,7 +35,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#define Camera_Buffer	0x24000000    //����ͷ��������ַ  AXI �����ϵ�SRAM��ʼ��ַ
+#define Camera_Buffer	0x24000000   //摄像头缓冲区
 
 /* USER CODE END PTD */
 
@@ -110,10 +111,9 @@ int main(void)
   MX_SPI5_Init();
   MX_USART1_UART_Init();
   MX_SPI4_Init();
+  MX_LPUART1_UART_Init();
+  MX_SDMMC1_SD_Init();
   /* USER CODE BEGIN 2 */
-  	lv_init();	
-	lv_port_disp_init();
-	
 //	DCMI_OV2640_Init();
 //	OV2640_Set_Horizontal_Mirror(0);
 //	OV2640_Set_Effect(0);
@@ -138,7 +138,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  printf("wohaiainine");
 	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
@@ -204,6 +203,12 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+//断言处理  覆盖ARM标准断言函数
+void __aeabi_assert(const char *expr, const char *file, int line) {
+    printf("Assertion failed: %s, file %s, line %d\n", expr, file, line);
+    while(1); // 死循环或触发复位
+}
+
 //void MPU_Config(void)
 //{
 //  MPU_Region_InitTypeDef MPU_InitStruct;

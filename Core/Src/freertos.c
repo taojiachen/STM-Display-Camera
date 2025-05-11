@@ -169,6 +169,8 @@ void displayTask(void *argument)
 	//lv_port_indev_init();
 	//lv_demo_stress();
 	//lv_demo_music();
+	lv_init();	
+	lv_port_disp_init();
 	lv_demo_benchmark();
 	printf("LVGL TASK Start !");
   for(;;)

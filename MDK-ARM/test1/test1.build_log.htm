@@ -21,16 +21,27 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
 Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
-C:\develop\Keil_develop\H723ZGT6\FreeRTOS-project\test1\MDK-ARM\test1.uvprojx
-Project File Date:  05/02/2025
+C:\develop\Keil_develop\H723ZGT6\FreeRTOS-project\智能家庭种植箱人机交互系统\MDK-ARM\test1.uvprojx
+Project File Date:  05/11/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Soft\Keil_v5\ARM\ARMCC\Bin'
 Build target 'test1'
+compiling usart.c...
+compiling main.c...
+../Middlewares/LVGL/GUI/lvgl/src/misc/lv_printf.h(81): warning:  #1362-D: unrecognized format function type "gnu_printf" ignored
+  int  lv_snprintf(char * buffer, size_t count, const char * format, ...) LV_FORMAT_ATTRIBUTE(3, 4);
+../Middlewares/LVGL/GUI/lvgl/src/misc/lv_printf.h(82): warning:  #1362-D: unrecognized format function type "gnu_printf" ignored
+  int lv_vsnprintf(char * buffer, size_t count, const char * format, va_list va) LV_FORMAT_ATTRIBUTE(3, 0);
+../Middlewares/LVGL/GUI/lvgl/src/hal/../draw/../misc/lv_txt.h(147): warning:  #1362-D: unrecognized format function type "gnu_printf" ignored
+  char * _lv_txt_set_text_vfmt(const char * fmt, va_list ap) LV_FORMAT_ATTRIBUTE(1, 0);
+../Middlewares/LVGL/GUI/lvgl/src/widgets/lv_label.h(109): warning:  #1362-D: unrecognized format function type "gnu_printf" ignored
+  void lv_label_set_text_fmt(lv_obj_t * obj, const char * fmt, ...) LV_FORMAT_ATTRIBUTE(2, 3);
+../Core/Src/main.c: 4 warnings, 0 errors
 linking...
-Program Size: Code=194286 RO-data=109718 RW-data=2876 ZI-data=253184  
+Program Size: Code=226860 RO-data=131788 RW-data=2992 ZI-data=245168  
 FromELF: creating hex file...
-"test1\test1.axf" - 0 Error(s), 0 Warning(s).
+"test1\test1.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -53,7 +64,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.4.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:08
 </pre>
 </body>
 </html>

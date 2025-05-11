@@ -32,6 +32,10 @@ test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h
 test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h
 test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h
 test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h
+test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h
+test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h
+test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h
+test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h
 test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h
 test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h
 test1\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h
@@ -49,9 +53,10 @@ test1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 test1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 test1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 test1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
-test1\main.o: ../Core/Inc/memorymap.h
-test1\main.o: ../Core/Inc/spi.h
 test1\main.o: ../Core/Inc/usart.h
+test1\main.o: ../Core/Inc/memorymap.h
+test1\main.o: ../Core/Inc/sdmmc.h
+test1\main.o: ../Core/Inc/spi.h
 test1\main.o: ../Core/Inc/gpio.h
 test1\main.o: C:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 test1\main.o: ../Middlewares/LVGL/GUI/lvgl/examples/porting/lv_port_disp_template.h

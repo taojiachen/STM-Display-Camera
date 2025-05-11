@@ -26,7 +26,7 @@
 
 SPI_HandleTypeDef hspi4;
 SPI_HandleTypeDef hspi5;
-SPI_HandleTypeDef hspi6;
+
 /* SPI4 init function */
 void MX_SPI4_Init(void)
 {
@@ -135,8 +135,6 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     __HAL_RCC_SPI4_CLK_ENABLE();
 
     __HAL_RCC_GPIOE_CLK_ENABLE();
-	GPIO_LDC_Backlight_CLK_ENABLE;   // Ê¹ÄÜ ±³¹â        Òý½ÅÊ±ÖÓ
-    GPIO_LDC_DC_CLK_ENABLE;          // Ê¹ÄÜ Êý¾ÝÖ¸ÁîÑ¡Ôñ Òý½ÅÊ±ÖÓ
     /**SPI4 GPIO Configuration
     PE2     ------> SPI4_SCK
     PE4     ------> SPI4_NSS
@@ -154,19 +152,19 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     HAL_NVIC_EnableIRQ(SPI4_IRQn);
   /* USER CODE BEGIN SPI4_MspInit 1 */
 	 
-// ³õÊ¼»¯ ±³¹â Òý½Å  
-		GPIO_InitStruct.Pin 	= LCD_Backlight_PIN;				// ±³¹â Òý½Å
-		GPIO_InitStruct.Mode 	= GPIO_MODE_OUTPUT_PP;			// ÍÆÍìÊä³öÄ£Ê½
-		GPIO_InitStruct.Pull 	= GPIO_PULLDOWN;					// ÏÂÀ­£¬Ä¬ÈÏ±£³ÖµÍµçÆ½
-		GPIO_InitStruct.Speed 	= GPIO_SPEED_FREQ_LOW;			// ËÙ¶ÈµÈ¼¶µÍ
-		HAL_GPIO_Init(LCD_Backlight_PORT, &GPIO_InitStruct);	// ³õÊ¼»¯  
+// ï¿½ï¿½Ê¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  
+		GPIO_InitStruct.Pin 	= LCD_Backlight_PIN;				// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		GPIO_InitStruct.Mode 	= GPIO_MODE_OUTPUT_PP;			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½
+		GPIO_InitStruct.Pull 	= GPIO_PULLDOWN;					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½Ï±ï¿½ï¿½ÖµÍµï¿½Æ½
+		GPIO_InitStruct.Speed 	= GPIO_SPEED_FREQ_LOW;			// ï¿½Ù¶ÈµÈ¼ï¿½ï¿½ï¿½
+		HAL_GPIO_Init(LCD_Backlight_PORT, &GPIO_InitStruct);	// ï¿½ï¿½Ê¼ï¿½ï¿½  
 
-// ³õÊ¼»¯ Êý¾ÝÖ¸ÁîÑ¡Ôñ Òý½Å  
-		GPIO_InitStruct.Pin 	= LCD_DC_PIN;				      // Êý¾ÝÖ¸ÁîÑ¡Ôñ Òý½Å
-		GPIO_InitStruct.Mode 	= GPIO_MODE_OUTPUT_PP;			// ÍÆÍìÊä³öÄ£Ê½
-		GPIO_InitStruct.Pull 	= GPIO_NOPULL;						// ÎÞÉÏÏÂÀ­
-		GPIO_InitStruct.Speed 	= GPIO_SPEED_FREQ_LOW;			// ËÙ¶ÈµÈ¼¶µÍ
-		HAL_GPIO_Init(LCD_DC_PORT, &GPIO_InitStruct);	      // ³õÊ¼»¯  
+// ï¿½ï¿½Ê¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ñ¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  
+		GPIO_InitStruct.Pin 	= LCD_DC_PIN;				      // ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ñ¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		GPIO_InitStruct.Mode 	= GPIO_MODE_OUTPUT_PP;			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½
+		GPIO_InitStruct.Pull 	= GPIO_NOPULL;						// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		GPIO_InitStruct.Speed 	= GPIO_SPEED_FREQ_LOW;			// ï¿½Ù¶ÈµÈ¼ï¿½ï¿½ï¿½
+		HAL_GPIO_Init(LCD_DC_PORT, &GPIO_InitStruct);	      // ï¿½ï¿½Ê¼ï¿½ï¿½  
   /* USER CODE END SPI4_MspInit 1 */
   }
   else if(spiHandle->Instance==SPI5)
